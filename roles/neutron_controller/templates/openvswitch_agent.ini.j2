@@ -7,4 +7,4 @@ tunnel_types = vxlan
 l2_population = True
 
 [securitygroup]
-firewall_driver = neutron.agent.linux.interface.OVSInterfaceDriver
+firewall_driver = neutron.agent.linux.iptables_firewall.OVSHybridIptablesFirewallDriver
