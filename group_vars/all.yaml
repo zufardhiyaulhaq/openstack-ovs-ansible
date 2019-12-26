@@ -12,9 +12,6 @@ openstack:
     - hostname: zu-ovs-compute1
       ip_man: 10.100.100.204
       ip_data: 10.201.201.204
-    - hostname: zu-ovs-compute2
-      ip_man: 10.100.100.205
-      ip_data: 10.201.201.205
 
 root_dbpw: DBROOT_PASS
 rabbitmq_pw: RABBIT_PASS
