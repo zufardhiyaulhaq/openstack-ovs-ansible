@@ -8,10 +8,10 @@ openstack:
   compute:
     - hostname: zu-ovs-compute0
       ip_man: 10.100.100.203
-      ip_data: 10.201.201.203
+      ip_data: 10.101.101.203
     - hostname: zu-ovs-compute1
       ip_man: 10.100.100.204
-      ip_data: 10.201.201.204
+      ip_data: 10.101.101.204
 
 root_dbpw: DBROOT_PASS
 rabbitmq_pw: RABBIT_PASS
