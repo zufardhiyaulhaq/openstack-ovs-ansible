@@ -48,8 +48,6 @@
     - openstack-neutron
     - openstack-neutron-ml2
     - openstack-neutron-openvswitch
-    - ebtables
-    - ipset
 
 - name: create neutron server configuration file
   template: src=neutron.conf.j2 dest=/etc/neutron/neutron.conf

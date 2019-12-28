@@ -2,10 +2,15 @@
 [l2pop]
 
 [ml2]
-type_drivers = flat,vlan,vxlan
-tenant_network_types = vxlan
-mechanism_drivers = openvswitch,l2population
+type_drivers=vxlan,flat
+tenant_network_types=vxlan
+mechanism_drivers=openvswitch
 
 [ml2_type_flat]
 [ml2_type_vxlan]
-vni_ranges = 10:100
+vni_ranges=10:1000
+vxlan_group=224.0.0.1
+
+[securitygroup]
+firewall_driver = neutron.agent.linux.iptables_firewall.IptablesFirewallDriver
+
