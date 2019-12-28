@@ -4,3 +4,7 @@ local_ip = {{ hostvars[inventory_hostname]['ansible_eth1']['ipv4']['address'] }}
 
 [agent]
 tunnel_types = vxlan
+
+[securitygroup]
+firewall_driver = neutron.agent.linux.iptables_firewall.IptablesFirewallDriver
+enable_security_group = true
