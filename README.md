@@ -10,24 +10,22 @@ This ansible script will provisioning OpenStack with OpenvSwitch Enabled.
 ```
 zu-ovs-controller0
 Interface Management (eth0) : 10.100.100.200
-Interface Data       (eth1) : 10.101.101.203
+Interface Data       (eth1) : 10.101.101.200
 Interface External   (eth2) : no ip address
 
 zu-ovs-compute0
-Interface Management (eth0) : 10.100.100.203
-Interface Data       (eth1) : 10.101.101.203
+Interface Management (eth0) : 10.100.100.210
+Interface Data       (eth1) : 10.101.101.210
 
 zu-ovs-compute1
-Interface Management (eth0) : 10.100.100.204
-Interface Data       (eth1) : 10.101.101.204
+Interface Management (eth0) : 10.100.100.211
+Interface Data       (eth1) : 10.101.101.211
 
 zu-ovs-compute2
-Interface Management (eth0) : 10.100.100.205
-Interface Data       (eth1) : 10.101.101.205
-
-zu-ovs-bootstrap
-Interface Management (eth0) : 10.100.100.210
+Interface Management (eth0) : 10.100.100.212
+Interface Data       (eth1) : 10.101.101.212
 ```
+
 ### Installation
 - Setup hosts mapping
 ```
