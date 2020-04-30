@@ -1,5 +1,5 @@
 [ovs]
-local_ip = {{ hostvars[inventory_hostname]['ansible_eth1']['ipv4']['address'] }}
+local_ip = {{ hostvars[inventory_hostname]['ansible_eth2']['ipv4']['address'] }}
 
 [agent]
 tunnel_types = vxlan
