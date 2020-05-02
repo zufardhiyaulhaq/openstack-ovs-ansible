@@ -4,6 +4,10 @@
 Vagrant.configure('2') do |config|
   config.vm.box = 'centos/7'
 
+  # change disk size if neccessary
+  # https://medium.com/@kanrangsan/how-to-automatically-resize-virtual-box-disk-with-vagrant-9f0f48aa46b3
+  # config.disksize.size = '100GB'
+
   (0..0).each do |i|
     config.vm.define "zu-ovs-controller-#{i}" do |controller|
       controller.vm.hostname = "zu-ovs-controller-#{i}"
