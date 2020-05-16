@@ -22,3 +22,8 @@ vm0_zone = "compute0"
 # openstack virtual machine 1
 vm1_network = "internal-0"
 vm1_zone = "compute0"
+
+# openstack type & kind
+os_type = "ovs"
+vm_type = "snsc"
+vm_user = "ubuntu"
