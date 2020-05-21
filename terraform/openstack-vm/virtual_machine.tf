@@ -152,8 +152,8 @@ resource "null_resource" "exec_ansible_packetloss" {
   }
 
   depends_on = [
-    local_file.group_vars_file_throughput,
-    local_file.hosts_file_throughput,
+    local_file.group_vars_file_packetloss,
+    local_file.hosts_file_packetloss,
     null_resource.exec_ansible_throughput,
   ]
 }
