@@ -42,7 +42,7 @@ Vagrant.configure('2') do |config|
 
   $script = <<-'SCRIPT'
   sudo apt update -y
-  sudo apt install iperf3 python3 python3-pip python-virtualenv-y
+  sudo apt install iperf3 python3 python3-pip python-virtualenv -y
   SCRIPT
 
   config.vm.define 'zu-ovs-internet' do |internet|
