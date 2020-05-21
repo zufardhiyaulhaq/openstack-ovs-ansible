@@ -86,6 +86,7 @@ data "template_file" "hosts" {
     server_floating_ip = var.outside_vm_ip
     client_floating_ip = openstack_networking_floatingip_v2.floatip_0.address
     vm_user            = var.vm_user
+    outside_vm_user    = var.outside_vm_user
   }
 }
 
