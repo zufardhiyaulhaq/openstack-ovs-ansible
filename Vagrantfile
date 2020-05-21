@@ -46,7 +46,7 @@ Vagrant.configure('2') do |config|
   SCRIPT
 
   config.vm.define 'zu-ovs-internet' do |internet|
-    internet.vm.box = 'ubuntu/xenial64'
+    internet.vm.box = 'hashicorp/bionic64'
     internet.vm.hostname = 'zu-ovs-internet'
     internet.vm.network 'private_network', ip: '10.101.102.250'
     internet.vm.provision 'shell', inline: $script
