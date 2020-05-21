@@ -40,6 +40,17 @@ Vagrant.configure('2') do |config|
     end
   end
 
+  config.vm.define 'zu-ovs-internet' do |internet|
+    internet.vm.box = 'ubuntu/xenial64'
+    internet.vm.hostname = 'zu-ovs-internet'
+    internet.vm.network 'private_network', ip: '10.101.102.250'
+    internet.vm.provider 'virtualbox' do |vb|
+      vb.name = 'zu-ovs-internet'
+      vb.memory = 4096
+      vb.cpus = 2
+    end
+  end
+
   config.vm.provision 'deploy', type: 'ansible', run: 'never' do |ansible|
     ansible.version = '2.5.5'
     ansible.groups = {
