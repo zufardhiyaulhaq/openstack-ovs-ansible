@@ -13,10 +13,3 @@
 
 - name: Run iperf3 server
   shell: iperf3 --server --one-off --daemon
-
-sudo su
-apt install libsctp1 -y
-wget https://iperf.fr/download/ubuntu/libiperf0_3.7-3_amd64.deb
-wget https://iperf.fr/download/ubuntu/iperf3_3.7-3_amd64.deb
-dpkg -i libiperf0_3.7-3_amd64.deb
-dpkg -i iperf3_3.7-3_amd64.deb
