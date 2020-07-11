@@ -3,6 +3,12 @@
     pkg:
     - libsctp1
 
+- name: copy sockperf
+  copy:
+    src: sockperf
+    dest: /usr/local/bin/sockperf
+    mode: u+x
+    
 - name: Install .deb package from the internet.
   apt:
     deb: https://iperf.fr/download/ubuntu/libiperf0_3.7-3_amd64.deb
@@ -12,4 +18,4 @@
     deb: https://iperf.fr/download/ubuntu/iperf3_3.7-3_amd64.deb
 
 - name: Run iperf3 server
-  shell: iperf3 --server --one-off --daemon
+  shell: iperf3 --server --daemon

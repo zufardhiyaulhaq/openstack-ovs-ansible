@@ -1,0 +1,9 @@
+[server]
+10.101.102.250 ansible_user=vagrant
+
+[client]
+10.101.102.234 ansible_user=ubuntu
+
+[all:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+

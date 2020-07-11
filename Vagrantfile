@@ -63,7 +63,17 @@ Vagrant.configure('2') do |config|
       'controllers' => %w[zu-ovs-controller-0],
       'computes' => %w[zu-ovs-compute-0 zu-ovs-compute-1 zu-ovs-compute-2]
     }
-    ansible.playbook = 'ansible/openstack-install/main.yml'
+    ansible.playbook = 'ansible/openstack-install/deploy.yml'
+    ansible.extra_vars = { ansible_python_interpreter: '/usr/bin/python' }
+  end
+
+  config.vm.provision 'post-deploy', type: 'ansible', run: 'never' do |ansible|
+    ansible.version = '2.5.5'
+    ansible.groups = {
+      'controllers' => %w[zu-ovs-controller-0],
+      'computes' => %w[zu-ovs-compute-0 zu-ovs-compute-1 zu-ovs-compute-2]
+    }
+    ansible.playbook = 'ansible/openstack-install/post-deploy.yml'
     ansible.extra_vars = { ansible_python_interpreter: '/usr/bin/python' }
   end
 end

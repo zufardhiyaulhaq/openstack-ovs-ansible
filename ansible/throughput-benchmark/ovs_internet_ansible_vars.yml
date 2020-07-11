@@ -1,0 +1,4 @@
+server_local_ip: 10.101.102.250
+client_local_ip: 192.168.0.162
+os_type: ovs
+vm_type: internet
