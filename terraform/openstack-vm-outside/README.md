@@ -1,6 +1,7 @@
 ### Terraform Example
 - init terraform
 ```
+ssh-copy-id vagrant@10.101.102.250
 terraform init
 ```
 
