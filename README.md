@@ -2,21 +2,16 @@
 This ansible script will provisioning OpenStack with OpenvSwitch Enabled.
 
 ### Tested
-- OpenStack Queens
+- OpenStack Steins
 - 1 controller 3 compute
 
 ### Requirement
 - virtualbox
 - vagrant
 - ansible 2.5.5
-- terraform (optional)
+- terraform
 
 ### Installation
-- install vagrant plugin
-```
-vagrant plugin install vagrant-disksize
-```
-
 - start vagrant
 ```
 vagrant up
