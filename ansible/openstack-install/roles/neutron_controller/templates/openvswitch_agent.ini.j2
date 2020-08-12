@@ -1,0 +1,10 @@
+[ovs]
+bridge_mappings = provider:br-provider
+local_ip = {{ hostvars[inventory_hostname]['ansible_eth2']['ipv4']['address'] }}
+
+[agent]
+tunnel_types = vxlan
+l2_population = True
+
+[securitygroup]
+firewall_driver = neutron.agent.linux.iptables_firewall.OVSHybridIptablesFirewallDriver
